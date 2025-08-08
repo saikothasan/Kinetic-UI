@@ -18,8 +18,41 @@ const fontMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "React Bits - Animated React Components",
-  description: "A library of 100+ animated, interactive, and customizable React components for creative developers.",
+  metadataBase: new URL(process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000'),
+  title: {
+    default: "Kinetic UI - Animated React Components for Creative Developers",
+    template: "%s | Kinetic UI",
+  },
+  description: "An open-source library of 100+ animated, interactive, and customizable React components, built with Next.js, Tailwind CSS, and Framer Motion.",
+  keywords: ["React components", "Framer Motion", "Tailwind CSS", "Next.js", "UI library", "animated components", "interactive UI"],
+  openGraph: {
+    title: "Kinetic UI - Animated React Components for Creative Developers",
+    description: "An open-source library of 100+ animated, interactive, and customizable React components.",
+    url: new URL(process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000'),
+    siteName: "Kinetic UI",
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Kinetic UI Hero Image',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Kinetic UI - Animated React Components for Creative Developers",
+    description: "An open-source library of 100+ animated, interactive, and customizable React components.",
+    images: ['/og-image.png'],
+  },
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon-16x16.png',
+    apple: '/apple-touch-icon.png',
+  },
+  manifest: '/site.webmanifest',
     generator: 'v0.dev'
 };
 

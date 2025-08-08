@@ -1,76 +1,94 @@
-# Fusion UI
-
-### A curated library of 100+ production-ready, animated, and customizable React components.
+# Kinetic UI
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Vercel Deployment](https://img.shields.io/badge/Vercel-Deploy-black?logo=vercel)](https://fusion-ui-v0.vercel.app/)
+[![Next.js](https://img.shields.io/badge/Next.js-15.3%2B-black?logo=next.js)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19-blue?logo=react)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.6%2B-blue?logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3-cyan?logo=tailwind-css)](https://tailwindcss.com/)
+[![Framer Motion](https://img.shields.io/badge/Framer%20Motion-10-purple?logo=framer)](https://www.framer.com/motion/)
 
-Welcome to Fusion UI, your new go-to resource for beautiful, copy-and-paste components that bring your web projects to life. Built for developers who value both aesthetics and performance.
+<p align="center">
+  <img src="public/og-image.png" alt="Kinetic UI Hero Image" width="700" />
+</p>
 
-![Fusion UI Hero Section](public/glowing-fluid-abstract.png)
+**Kinetic UI** is a modern, open-source library of 100+ animated, interactive, and customizable React components, built with the latest web technologies. It's designed for developers who want to add flair and delight to their web applications with minimal effort.
 
 ## ✨ Features
 
-- **100+ Components**: A vast collection covering everything from buttons and cards to complex layouts and background effects.
-- **Beautifully Animated**: Smooth, delightful animations powered by `Framer Motion`.
-- **Highly Customizable**: Easily tweak props and styles to match your brand. All components are built with `Tailwind CSS`.
-- **Production-Ready**: Built with performance, accessibility, and responsiveness in mind.
-- **Copy & Paste**: Drop components directly into your projects with minimal setup.
-- **Interactive Previews**: Test and configure each component in a live playground.
-- **Dark Mode as Default**: Styled for modern, developer-focused interfaces.
+-   **Extensive Component Library**: Over 100 components, from buttons and cards to complex backgrounds and interactive effects.
+-   **Animation-First**: Built with Framer Motion for smooth, performant, and beautiful animations.
+-   **Highly Customizable**: Easily tweak props, colors, and styles to fit your brand.
+-   **Live Previews**: Interact with components and see your changes in real-time in the documentation.
+-   **Code at your Fingertips**: One-click copy-to-clipboard for every component.
+-   **Developer-Centric**: Built with Next.js 15, React 19, and TypeScript for a best-in-class developer experience.
+-   **Dark Mode as Default**: A sleek, modern dark theme that's easy on the eyes.
+-   **Fully Responsive**: Components are designed to work beautifully on all screen sizes.
+-   **Search & Filtering**: Quickly find the component you need with a powerful command palette and category filters.
 
-## 🛠️ Tech Stack
+## 🚀 Tech Stack
 
-- **Framework**: [Next.js](https://nextjs.org/) 14+ (App Router)
-- **Language**: [TypeScript](https://www.typescriptlang.org/)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-- **Animations**: [Framer Motion](https://www.framer.com/motion/)
-- **3D Components**: [React Three Fiber](https://docs.pmnd.rs/react-three-fiber/getting-started/introduction) & [Drei](https://github.com/pmndrs/drei)
-- **Icons**: [Lucide React](https://lucide.dev/)
-- **Deployment**: [Vercel](https://vercel.com/)
+-   **Framework**: [Next.js 15.3+](https://nextjs.org/) (with App Router)
+-   **Language**: [TypeScript 5.6+](https://www.typescriptlang.org/)
+-   **UI Library**: [React 19](https://react.dev/)
+-   **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+-   **Animation**: [Framer Motion](https://www.framer.com/motion/)
+-   **Icons**: [Lucide React](https://lucide.dev/)
+-   **Deployment**: [Vercel](https://vercel.com/)
 
-## 🚀 Getting Started
+## 🏁 Getting Started
 
 To get a local copy up and running, follow these simple steps.
 
 ### Prerequisites
 
-- Node.js (v18.x or later)
-- pnpm, npm, or yarn
+-   Node.js (v18.17 or later)
+-   npm, yarn, or pnpm
 
 ### Installation
 
-1.  **Clone the repository:**
+1.  Clone the repository:
     \`\`\`sh
-    git clone https://github.com/your-username/fusion-ui.git
+    git clone https://github.com/your-username/kinetic-ui.git
     \`\`\`
-2.  **Navigate to the project directory:**
+2.  Navigate to the project directory:
     \`\`\`sh
-    cd fusion-ui
+    cd kinetic-ui
     \`\`\`
-3.  **Install dependencies:**
+3.  Install dependencies:
     \`\`\`sh
-    pnpm install
+    npm install
     \`\`\`
-4.  **Run the development server:**
+4.  Run the development server:
     \`\`\`sh
-    pnpm dev
+    npm run dev
     \`\`\`
+5.  Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📂 Project Structure
 
-## 🧩 Component Categories
+The project follows a standard Next.js App Router structure, with components organized for clarity and scalability.
 
-Fusion UI organizes its components into intuitive categories for easy browsing:
-
-- **Layouts**: Responsive grids, bento boxes, and structural elements.
-- **Cards**: Interactive, floating, and spotlight cards.
-- **Buttons**: Shiny, animated, and interactive buttons.
-- **Navigation**: Animated tabs, dock menus, and sidebars.
-- **Text Effects**: Typewriter and text reveal animations.
-- **Backgrounds**: Aurora, particle, and other dynamic backgrounds.
-- **Scroll Effects**: Parallax scrolling and scroll-triggered animations.
-- **Interactive**: 3D globes, confetti cannons, and more.
+\`\`\`
+src/
+├── app/
+│   ├── (main)/             # Main application routes
+│   │   ├── components/
+│   │   │   └── [slug]/
+│   │   │       └── page.tsx  # Component detail page
+│   │   └── page.tsx          # Homepage
+│   ├── globals.css
+│   └── layout.tsx          # Root layout
+├── components/
+│   ├── library/            # Individual React components
+│   ├── ui/                 # shadcn/ui components
+│   └── ...                 # Other shared UI components
+├── data/
+│   ├── components/         # Data, code, and props for each library component
+│   └── types.ts            # TypeScript types
+└── lib/
+    ├── hooks/              # Custom React hooks
+    └── utils.ts            # Utility functions
+\`\`\`
 
 ## 🤝 Contributing
 
@@ -79,14 +97,14 @@ Contributions are what make the open-source community such an amazing place to l
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
 
 1.  Fork the Project
-2.  Create your Feature Branch (`git checkout -b feature/AmazingComponent`)
-3.  Commit your Changes (`git commit -m 'Add some AmazingComponent'`)
-4.  Push to the Branch (`git push origin feature/AmazingComponent`)
+2.  Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3.  Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4.  Push to the Branch (`git push origin feature/AmazingFeature`)
 5.  Open a Pull Request
 
-## 📄 License
+## 📜 License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 \`\`\`
 
-I've updated the site's identity to "Fusion UI," added comprehensive SEO metadata to `app/layout.tsx` for better search engine visibility and social sharing, and created a detailed `README.md` to document the project.
+Next, I'll add the necessary files for SEO, including a sitemap, robots.txt, and various icons.

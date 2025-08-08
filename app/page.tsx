@@ -79,7 +79,7 @@ export default function Component() {
       <header className="relative z-20 flex items-center justify-between p-4 md:p-6 border-b border-white/10">
         <div className="flex items-center gap-2">
           <SidebarTrigger className="md:hidden" />
-          <span className="text-lg font-bold hidden md:inline-block">React Bits</span>
+          <span className="text-lg font-bold hidden md:inline-block">Kinetic UI</span>
         </div>
         <nav className="hidden md:flex items-center gap-6">
           <a href="#" className="text-sm font-medium flex items-center gap-1.5">
@@ -103,10 +103,10 @@ export default function Component() {
       <div className="relative z-10 flex flex-col items-center justify-center pt-20 pb-10 text-center px-4">
         <div className="max-w-3xl">
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-300">
-            Animated React components for creative developers
+            Build stunning UIs with Kinetic UI
           </h1>
           <p className="mt-6 text-lg text-gray-400 max-w-xl mx-auto">
-            Ninety-plus snippets, ready to be dropped into your React projects
+            Over 100 animated, interactive, and customizable React components, ready to be dropped into your projects.
           </p>
           <div className="mt-8">
             <Button size="lg" className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold text-lg px-8 py-6 rounded-full shadow-[0_0_20px] shadow-purple-500/50 transition-shadow">
@@ -157,7 +157,7 @@ export default function Component() {
           <div className="flex items-center gap-2">
             <Sparkles className="h-5 w-5 text-yellow-300" />
             <p>
-              <span className="font-semibold">Vue Bits</span>, the official Vue port of React Bits, is here!
+              <span className="font-semibold">Vue Bits</span>, the official Vue port of Kinetic UI, is here!
             </p>
           </div>
           <div className="flex items-center gap-2">

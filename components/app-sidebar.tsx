@@ -63,7 +63,7 @@ export function AppSidebar() {
       <SidebarHeader className="p-4 flex flex-col gap-4">
         <Link href="/" className="flex items-center gap-2 group-data-[collapsible=icon]:hidden">
           <Code className="h-6 w-6 text-purple-400" />
-          <span className="text-lg font-bold text-white">React Bits</span>
+          <span className="text-lg font-bold text-white">Kinetic UI</span>
         </Link>
         <div className="relative">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400 group-data-[collapsible=icon]:left-1/2 group-data-[collapsible=icon]:-translate-x-1/2" />
