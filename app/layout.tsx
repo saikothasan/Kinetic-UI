@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     apple: '/apple-touch-icon.png',
   },
   manifest: '/site.webmanifest',
-    generator: 'v0.dev'
+    generator: 'drkingbd'
 };
 
 export default function RootLayout({
