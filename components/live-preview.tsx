@@ -25,8 +25,6 @@ import RippleButton from "./library/ripple-button";
 import GridDotBackground from "./library/grid-dot-background";
 import FollowerPointer from "./library/follower-pointer";
 import CardStack from "./library/card-stack";
-import EvervaultCard from "./library/evervault-card";
-import SparklesEffect from "./library/sparkles-effect";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles, Rocket, Milestone, Flag, CheckCircle } from 'lucide-react';
 
@@ -141,8 +139,6 @@ const componentMap: { [key: string]: React.FC<any> } = {
   "grid-dot-background": (props) => <GridDotBackground {...props} />,
   "follower-pointer": (props) => <FollowerPointer {...props} />,
   "card-stack": (props) => <CardStack {...props} />,
-  "evervault-card": (props) => <EvervaultCard {...props} />,
-  "sparkles-effect": (props) => <SparklesEffect {...props} />,
 };
 
 const DefaultPreview = () => (
@@ -263,22 +259,6 @@ export function LivePreview({ slug, className, dynamicProps = {} }: LivePreviewP
         { id: 1, name: "Elon Musk", designation: "Founder, SpaceX", content: "I'm going to Mars with these components." },
         { id: 2, name: "Jeff Bezos", designation: "Founder, Amazon", content: "My new clock will be built using this library." },
       ]
-    },
-    "evervault-card": {
-      children: (
-        <div className="text-center">
-          <h3 className="text-2xl font-bold text-white">Evervault</h3>
-          <p className="mt-2 text-gray-400">Hover to reveal the magic.</p>
-        </div>
-      )
-    },
-    "sparkles-effect": {
-      children: (
-        <h1 className="text-4xl font-bold text-center text-white">
-          Sparkles
-        </h1>
-      ),
-      className: "w-full h-full flex items-center justify-center"
     },
   };
 

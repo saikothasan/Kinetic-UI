@@ -97,10 +97,6 @@ const config = {
           "50%": { backgroundPosition: "100% 50%" },
           "100%": { backgroundPosition: "0% 50%" },
         },
-        "sparkle": {
-          "0%, 100%": { opacity: "0", transform: "scale(0.5)" },
-          "50%": { opacity: "1", transform: "scale(1)" },
-        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -109,7 +105,6 @@ const config = {
         "glow-pan": "glow-pan 8s linear infinite",
         "meteor-effect": "meteor-effect 2s linear infinite",
         "gradient-pan": "gradient-pan 3s ease infinite",
-        "sparkle": "sparkle 1.5s ease-in-out infinite",
       },
     },
   },

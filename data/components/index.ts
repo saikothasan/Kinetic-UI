@@ -23,8 +23,6 @@ import rippleButton from "./ripple-button";
 import gridDotBackground from "./grid-dot-background";
 import followerPointer from "./follower-pointer";
 import cardStack from "./card-stack";
-import evervaultCard from "./evervault-card";
-import sparklesEffect from "./sparkles-effect";
 
 export const componentsData: ComponentProps[] = [
   shinyButton,
@@ -51,6 +49,4 @@ export const componentsData: ComponentProps[] = [
   gridDotBackground,
   followerPointer,
   cardStack,
-  evervaultCard,
-  sparklesEffect,
 ].sort((a, b) => a.id - b.id);
