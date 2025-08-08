@@ -15,6 +15,8 @@ import meteorEffect from "./meteor-effect";
 import numberTicker from "./number-ticker";
 import animatedGradientText from "./animated-gradient-text";
 import draggableSlider from "./draggable-slider";
+import interactiveGlobe from "./interactive-globe";
+import animatedTimeline from "./animated-timeline";
 
 export const componentsData: ComponentProps[] = [
   shinyButton,
@@ -33,4 +35,6 @@ export const componentsData: ComponentProps[] = [
   numberTicker,
   animatedGradientText,
   draggableSlider,
+  interactiveGlobe,
+  animatedTimeline,
 ].sort((a, b) => a.id - b.id);

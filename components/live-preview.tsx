@@ -17,8 +17,10 @@ import MeteorEffect from "./library/meteor-effect";
 import NumberTicker from "./library/number-ticker";
 import AnimatedGradientText from "./library/animated-gradient-text";
 import DraggableSlider from "./library/draggable-slider";
+import InteractiveGlobe from "./library/interactive-globe";
+import AnimatedTimeline from "./library/animated-timeline";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight, Sparkles, Rocket, Milestone, Flag, CheckCircle } from 'lucide-react';
 
 interface LivePreviewProps {
   slug: string;
@@ -123,6 +125,8 @@ const componentMap: { [key: string]: React.FC<any> } = {
   "number-ticker": (props) => <NumberTicker {...props} />,
   "animated-gradient-text": (props) => <AnimatedGradientText {...props} />,
   "draggable-slider": (props) => <DraggableSlider {...props} />,
+  "interactive-globe": (props) => <InteractiveGlobe {...props} />,
+  "animated-timeline": (props) => <AnimatedTimeline {...props} />,
 };
 
 const DefaultPreview = () => (
@@ -194,6 +198,15 @@ export function LivePreview({ slug, className, dynamicProps = {} }: LivePreviewP
     "draggable-slider": {
       initialValue: 50,
     },
+    "interactive-globe": {},
+    "animated-timeline": {
+      items: [
+        { date: "Jan 2023", title: "Project Kickoff", description: "The project officially started.", icon: <Rocket className="h-4 w-4 text-white" /> },
+        { date: "Mar 2023", title: "Alpha Release", description: "First version released to a closed group.", icon: <Milestone className="h-4 w-4 text-white" /> },
+        { date: "Jun 2023", title: "Beta Launch", description: "Public beta available for testing.", icon: <Flag className="h-4 w-4 text-white" /> },
+        { date: "Sep 2023", title: "Official Launch", description: "Version 1.0 is live!", icon: <CheckCircle className="h-4 w-4 text-white" /> },
+      ]
+    },
   };
 
   const props = { ...defaultProps[slug], ...dynamicProps };
@@ -222,6 +235,22 @@ export function LivePreview({ slug, className, dynamicProps = {} }: LivePreviewP
           <NumberTicker {...props} />
         </p>
       </PreviewWrapper>
+    )
+  }
+
+  if (slug === 'interactive-globe') {
+    return (
+      <div className="w-full h-96">
+        <InteractiveGlobe {...props} />
+      </div>
+    )
+  }
+
+  if (slug === 'animated-timeline') {
+    return (
+      <div className="h-96 w-full overflow-y-scroll rounded-lg border border-dashed border-white/10 bg-black/20">
+        <AnimatedTimeline {...props} />
+      </div>
     )
   }
 
