@@ -19,6 +19,14 @@ import AnimatedGradientText from "./library/animated-gradient-text";
 import DraggableSlider from "./library/draggable-slider";
 import InteractiveGlobe from "./library/interactive-globe";
 import AnimatedTimeline from "./library/animated-timeline";
+import LampEffect from "./library/lamp-effect";
+import MagicInput from "./library/magic-input";
+import RippleButton from "./library/ripple-button";
+import GridDotBackground from "./library/grid-dot-background";
+import FollowerPointer from "./library/follower-pointer";
+import CardStack from "./library/card-stack";
+import EvervaultCard from "./library/evervault-card";
+import SparklesEffect from "./library/sparkles-effect";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles, Rocket, Milestone, Flag, CheckCircle } from 'lucide-react';
 
@@ -127,6 +135,14 @@ const componentMap: { [key: string]: React.FC<any> } = {
   "draggable-slider": (props) => <DraggableSlider {...props} />,
   "interactive-globe": (props) => <InteractiveGlobe {...props} />,
   "animated-timeline": (props) => <AnimatedTimeline {...props} />,
+  "lamp-effect": (props) => <LampEffect {...props} />,
+  "magic-input": (props) => <MagicInput {...props} />,
+  "ripple-button": (props) => <RippleButton {...props} />,
+  "grid-dot-background": (props) => <GridDotBackground {...props} />,
+  "follower-pointer": (props) => <FollowerPointer {...props} />,
+  "card-stack": (props) => <CardStack {...props} />,
+  "evervault-card": (props) => <EvervaultCard {...props} />,
+  "sparkles-effect": (props) => <SparklesEffect {...props} />,
 };
 
 const DefaultPreview = () => (
@@ -207,6 +223,63 @@ export function LivePreview({ slug, className, dynamicProps = {} }: LivePreviewP
         { date: "Sep 2023", title: "Official Launch", description: "Version 1.0 is live!", icon: <CheckCircle className="h-4 w-4 text-white" /> },
       ]
     },
+    "lamp-effect": {
+      children: (
+        <div className="text-center">
+          <h2 className="text-4xl font-bold text-white">Lamp Effect</h2>
+          <p className="mt-4 text-gray-400">Move your mouse to see the light.</p>
+        </div>
+      ),
+      containerClassName: "rounded-2xl w-full max-w-2xl h-96"
+    },
+    "magic-input": {
+      placeholder: "Focus me..."
+    },
+    "ripple-button": {
+      children: "Click Me"
+    },
+    "grid-dot-background": {
+      children: (
+        <div className="w-full h-full flex items-center justify-center">
+          <div className="text-center">
+            <h2 className="text-4xl font-bold text-white">Hover Me</h2>
+            <p className="mt-4 text-gray-400">The dots will illuminate.</p>
+          </div>
+        </div>
+      ),
+      className: "w-full h-96 rounded-2xl"
+    },
+    "follower-pointer": {
+      children: (
+        <div className="w-full h-96 rounded-2xl border border-dashed border-white/10 bg-black/20 flex items-center justify-center">
+          <p className="text-gray-400">Hover anywhere in this box</p>
+        </div>
+      ),
+      title: "React Bits"
+    },
+    "card-stack": {
+      items: [
+        { id: 0, name: "Manu Arora", designation: "Founder, Algochurn", content: "This is truly amazing, the best thing since sliced bread." },
+        { id: 1, name: "Elon Musk", designation: "Founder, SpaceX", content: "I'm going to Mars with these components." },
+        { id: 2, name: "Jeff Bezos", designation: "Founder, Amazon", content: "My new clock will be built using this library." },
+      ]
+    },
+    "evervault-card": {
+      children: (
+        <div className="text-center">
+          <h3 className="text-2xl font-bold text-white">Evervault</h3>
+          <p className="mt-2 text-gray-400">Hover to reveal the magic.</p>
+        </div>
+      )
+    },
+    "sparkles-effect": {
+      children: (
+        <h1 className="text-4xl font-bold text-center text-white">
+          Sparkles
+        </h1>
+      ),
+      className: "w-full h-full flex items-center justify-center"
+    },
   };
 
   const props = { ...defaultProps[slug], ...dynamicProps };
@@ -251,6 +324,18 @@ export function LivePreview({ slug, className, dynamicProps = {} }: LivePreviewP
       <div className="h-96 w-full overflow-y-scroll rounded-lg border border-dashed border-white/10 bg-black/20">
         <AnimatedTimeline {...props} />
       </div>
+    )
+  }
+
+  if (slug === 'lamp-effect') {
+    return (
+      <LampEffect {...props} />
+    )
+  }
+
+  if (slug === 'grid-dot-background') {
+    return (
+      <GridDotBackground {...props} />
     )
   }
 
