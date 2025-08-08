@@ -8,7 +8,7 @@
 [![Framer Motion](https://img.shields.io/badge/Framer%20Motion-10-purple?logo=framer)](https://www.framer.com/motion/)
 
 <p align="center">
-  <img src="public/og-image.png" alt="Kinetic UI Hero Image" width="700" />
+  <img src="public/apple-touch-icon.png" alt="Kinetic UI Hero Image" width="700" />
 </p>
 
 **Kinetic UI** is a modern, open-source library of 100+ animated, interactive, and customizable React components, built with the latest web technologies. It's designed for developers who want to add flair and delight to their web applications with minimal effort.
@@ -47,28 +47,28 @@ To get a local copy up and running, follow these simple steps.
 ### Installation
 
 1.  Clone the repository:
-    \`\`\`sh
+    ```sh
     git clone https://github.com/saikothasan/Kinetic-UI.git
-    \`\`\`
+    ```
 2.  Navigate to the project directory:
-    \`\`\`sh
+    ```sh
     cd kinetic-ui
-    \`\`\`
+    ```
 3.  Install dependencies:
-    \`\`\`sh
+    ```sh
     npm install
-    \`\`\`
+    ```
 4.  Run the development server:
-    \`\`\`sh
+    ```sh
     npm run dev
-    \`\`\`
+    ```
 5.  Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## 📂 Project Structure
 
 The project follows a standard Next.js App Router structure, with components organized for clarity and scalability.
 
-\`\`\`
+```
 src/
 ├── app/
 │   ├── (main)/             # Main application routes
@@ -88,7 +88,7 @@ src/
 └── lib/
     ├── hooks/              # Custom React hooks
     └── utils.ts            # Utility functions
-\`\`\`
+```
 
 ## 🤝 Contributing
 
