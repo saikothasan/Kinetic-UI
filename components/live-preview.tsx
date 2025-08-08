@@ -13,6 +13,10 @@ import TextReveal from "./library/text-reveal";
 import { BentoGrid, BentoGridItem } from "./library/bento-grid";
 import SpotlightCard from "./library/spotlight-card";
 import AnimatedBarChart from "./library/animated-bar-chart";
+import MeteorEffect from "./library/meteor-effect";
+import NumberTicker from "./library/number-ticker";
+import AnimatedGradientText from "./library/animated-gradient-text";
+import DraggableSlider from "./library/draggable-slider";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from 'lucide-react';
 
@@ -115,6 +119,10 @@ const componentMap: { [key: string]: React.FC<any> } = {
   "bento-grid": (props) => <BentoGridDemo {...props} />,
   "spotlight-card": (props) => <SpotlightCard {...props} />,
   "animated-bar-chart": (props) => <AnimatedBarChart {...props} />,
+  "meteor-effect": (props) => <MeteorEffect {...props} />,
+  "number-ticker": (props) => <NumberTicker {...props} />,
+  "animated-gradient-text": (props) => <AnimatedGradientText {...props} />,
+  "draggable-slider": (props) => <DraggableSlider {...props} />,
 };
 
 const DefaultPreview = () => (
@@ -173,13 +181,53 @@ export function LivePreview({ slug, className, dynamicProps = {} }: LivePreviewP
         { name: "Jun", value: 2390 },
       ]
     },
+    "meteor-effect": {
+      number: 20,
+    },
+    "number-ticker": {
+      value: 18600,
+    },
+    "animated-gradient-text": {
+      text: "Animated Gradient",
+      className: "text-4xl font-bold",
+    },
+    "draggable-slider": {
+      initialValue: 50,
+    },
   };
 
   const props = { ...defaultProps[slug], ...dynamicProps };
 
-  return (
+  const PreviewWrapper = ({ children }: { children: React.ReactNode }) => (
     <div className={`w-full h-full flex items-center justify-center ${className}`}>
-      <Component {...props} />
+      {children}
     </div>
+  );
+
+  if (slug === 'meteor-effect') {
+    return (
+      <div className="w-full h-full relative overflow-hidden">
+        <MeteorEffect {...props} />
+        <div className="absolute inset-0 flex items-center justify-center text-white text-3xl font-bold">
+          Meteors
+        </div>
+      </div>
+    )
+  }
+  
+  if (slug === 'number-ticker') {
+    return (
+      <PreviewWrapper>
+        <p className="text-4xl font-bold">
+          <NumberTicker {...props} />
+        </p>
+      </PreviewWrapper>
+    )
+  }
+
+  return (
+    <PreviewWrapper>
+      <Component {...props} />
+    </PreviewWrapper>
   );
 }

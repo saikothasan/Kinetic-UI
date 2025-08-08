@@ -11,6 +11,10 @@ import textReveal from "./text-reveal";
 import bentoGrid from "./bento-grid";
 import spotlightCard from "./spotlight-card";
 import animatedBarChart from "./animated-bar-chart";
+import meteorEffect from "./meteor-effect";
+import numberTicker from "./number-ticker";
+import animatedGradientText from "./animated-gradient-text";
+import draggableSlider from "./draggable-slider";
 
 export const componentsData: ComponentProps[] = [
   shinyButton,
@@ -25,4 +29,8 @@ export const componentsData: ComponentProps[] = [
   bentoGrid,
   spotlightCard,
   animatedBarChart,
+  meteorEffect,
+  numberTicker,
+  animatedGradientText,
+  draggableSlider,
 ].sort((a, b) => a.id - b.id);
