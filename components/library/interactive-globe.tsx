@@ -3,7 +3,7 @@
 import { useRef, useState, useMemo, type FC } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { useTexture, OrbitControls, Stars, Html } from "@react-three/drei";
-import { motion } from "framer-motion/three";
+import { motion as motion3d } from "framer-motion-3d";
 import * as THREE from "three";
 
 interface Point {
@@ -54,7 +54,7 @@ function Marker({
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <motion.mesh
+    <motion3d.mesh
       position={position}
       onPointerOver={() => setIsHovered(true)}
       onPointerOut={() => setIsHovered(false)}
@@ -71,7 +71,7 @@ function Marker({
           </div>
         </Html>
       )}
-    </motion.mesh>
+    </motion3d.mesh>
   );
 }
 
