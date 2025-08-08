@@ -10,8 +10,11 @@ import FloatingCard from "./library/floating-card";
 import AnimatedTabs from "./library/animated-tabs";
 import ConfettiCannon from "./library/confetti-cannon";
 import TextReveal from "./library/text-reveal";
+import { BentoGrid, BentoGridItem } from "./library/bento-grid";
+import SpotlightCard from "./library/spotlight-card";
+import InteractiveGlobe from "./library/interactive-globe";
 import { Button } from "@/components/ui/button";
-import { Sparkles } from 'lucide-react';
+import { ArrowRight, Sparkles } from 'lucide-react';
 
 interface LivePreviewProps {
   slug: string;
@@ -49,6 +52,56 @@ const TextRevealWrapper = (props: any) => (
   </div>
 );
 
+const BentoGridDemo = (props: any) => {
+  const Skeleton = () => (
+    <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-900 to-neutral-800" />
+  );
+  const items = [
+    {
+      title: "Automated Workflows",
+      description: "Create and manage complex workflows with ease.",
+      header: <Skeleton />,
+      className: "md:col-span-2",
+      icon: <ArrowRight className="h-4 w-4 text-neutral-500" />,
+    },
+    {
+      title: "Interactive Previews",
+      description: "See your changes live as you build.",
+      header: <Skeleton />,
+      className: "md:col-span-1",
+      icon: <ArrowRight className="h-4 w-4 text-neutral-500" />,
+    },
+    {
+      title: "Real-time Collaboration",
+      description: "Work with your team in the same space.",
+      header: <Skeleton />,
+      className: "md:col-span-1",
+      icon: <ArrowRight className="h-4 w-4 text-neutral-500" />,
+    },
+    {
+      title: "AI-Powered Suggestions",
+      description: "Get smart suggestions to improve your code.",
+      header: <Skeleton />,
+      className: "md:col-span-2",
+      icon: <ArrowRight className="h-4 w-4 text-neutral-500" />,
+    },
+  ];
+  return (
+    <BentoGrid {...props}>
+      {items.map((item, i) => (
+        <BentoGridItem
+          key={i}
+          title={item.title}
+          description={item.description}
+          header={item.header}
+          className={item.className}
+          icon={item.icon}
+        />
+      ))}
+    </BentoGrid>
+  );
+};
+
 const componentMap: { [key: string]: React.FC<any> } = {
   "shiny-button": (props) => <ShinyButton {...props} />,
   "typewriter-effect": (props) => <TypewriterEffect {...props} />,
@@ -59,6 +112,9 @@ const componentMap: { [key: string]: React.FC<any> } = {
   "animated-tabs": (props) => <AnimatedTabs {...props} />,
   "confetti-cannon": (props) => <ConfettiCannonWrapper {...props} />,
   "text-reveal": (props) => <TextRevealWrapper {...props} />,
+  "bento-grid": (props) => <BentoGridDemo {...props} />,
+  "spotlight-card": (props) => <SpotlightCard {...props} />,
+  "interactive-globe": (props) => <InteractiveGlobe {...props} />,
 };
 
 const DefaultPreview = () => (
@@ -97,6 +153,24 @@ export function LivePreview({ slug, className, dynamicProps = {} }: LivePreviewP
     },
     "text-reveal": {
       text: "Build stunning, animated user interfaces with the power of Framer Motion and React."
+    },
+    "bento-grid": {},
+    "spotlight-card": {
+      children: (
+        <div className="text-center">
+          <h3 className="text-2xl font-bold text-white">Spotlight</h3>
+          <p className="mt-2 text-gray-400">Hover over this card to see the effect.</p>
+        </div>
+      )
+    },
+    "interactive-globe": {
+      points: [
+        { lat: 34.0522, lon: -118.2437, city: 'Los Angeles', country: 'USA' },
+        { lat: 40.7128, lon: -74.0060, city: 'New York', country: 'USA' },
+        { lat: 51.5074, lon: -0.1278, city: 'London', country: 'UK' },
+        { lat: 35.6895, lon: 139.6917, city: 'Tokyo', country: 'Japan' },
+        { lat: -33.8688, lon: 151.2093, city: 'Sydney', country: 'Australia' },
+      ]
     }
   };
 
