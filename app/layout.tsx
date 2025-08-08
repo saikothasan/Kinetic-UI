@@ -6,6 +6,7 @@ import { AppSidebar } from "@/components/app-sidebar";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import { cookies } from "next/headers";
 import { PageProvider } from "@/components/page-provider";
+import { Footer } from "@/components/footer";
 
 const fontSans = Inter({
   subsets: ["latin"],
@@ -68,19 +69,18 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased",
+          "min-h-screen bg-background font-sans antialiased flex flex-col",
           fontSans.variable,
           fontMono.variable
         )}
       >
         <PageProvider>
-          <SidebarProvider defaultOpen={defaultOpen}>
-            <div className="flex">
-              <AppSidebar />
-              <main className="flex-1">{children}</main>
-            </div>
-          </SidebarProvider>
+          <div className="flex flex-1">
+            <AppSidebar />
+            <main className="flex-1">{children}</main>
+          </div>
         </PageProvider>
+        <Footer />
       </body>
     </html>
   );

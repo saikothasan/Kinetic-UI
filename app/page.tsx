@@ -2,7 +2,7 @@
 
 import { type FC } from "react";
 import { motion } from "framer-motion";
-import { Star, ChevronRight, Sparkles, Share2, X, PanelLeft } from 'lucide-react';
+import { Star, ChevronRight, Sparkles, Share2, X, PanelLeft, Send } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import ComponentShowcase from "@/components/component-showcase";
@@ -161,9 +161,11 @@ export default function Component() {
             </p>
           </div>
           <div className="flex items-center gap-2">
-            <Button variant="ghost" size="sm" className="hover:bg-white/20 rounded-full">
-              <Share2 className="h-4 w-4 mr-2" />
-              Share on X
+            <Button asChild variant="ghost" size="sm" className="hover:bg-white/20 rounded-full">
+              <a href="https://t.me/drkingbdAnd" target="_blank" rel="noopener noreferrer">
+                <Send className="h-4 w-4 mr-2" />
+                Join our Telegram
+              </a>
             </Button>
             <Button variant="ghost" size="icon" className="hover:bg-white/20 rounded-full h-8 w-8">
               <X className="h-4 w-4" />
