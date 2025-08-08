@@ -15,11 +15,11 @@ export function Footer() {
               An open-source library of animated, interactive, and customizable React components.
             </p>
             <div className="mt-6 flex space-x-4">
-              <a href="https://github.com/vercel/v0" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">
+              <a href="https://github.com/saikothasan/Kinetic-UI" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">
                 <Github className="h-6 w-6" />
                 <span className="sr-only">GitHub</span>
               </a>
-              <a href="https://t.me/drkingbdAnd" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">
+              <a href="https://t.me/drkingbd" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">
                 <Send className="h-6 w-6" />
                 <span className="sr-only">Telegram</span>
               </a>

@@ -51,7 +51,7 @@ export function CommandPalette({ open, setOpen }: CommandPaletteProps) {
           <CommandItem
             onSelect={() =>
               runCommand(() =>
-                window.open("https://github.com/vercel/v0", "_blank")
+                window.open("https://github.com/saikothasan/Kinetic-UI", "_blank")
               )
             }
           >

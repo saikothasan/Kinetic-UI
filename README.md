@@ -48,7 +48,7 @@ To get a local copy up and running, follow these simple steps.
 
 1.  Clone the repository:
     \`\`\`sh
-    git clone https://github.com/your-username/kinetic-ui.git
+    git clone https://github.com/saikothasan/Kinetic-UI.git
     \`\`\`
 2.  Navigate to the project directory:
     \`\`\`sh
@@ -105,6 +105,3 @@ If you have a suggestion that would make this better, please fork the repo and c
 ## 📜 License
 
 Distributed under the MIT License. See `LICENSE` for more information.
-\`\`\`
-
-Next, I'll add the necessary files for SEO, including a sitemap, robots.txt, and various icons.

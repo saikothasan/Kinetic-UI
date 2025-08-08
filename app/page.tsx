@@ -93,11 +93,13 @@ export default function HomePage() {
             Showcase
           </a>
         </nav>
-        <Button className="bg-white/10 hover:bg-white/20 text-white text-sm font-medium border border-white/20">
-          <Star className="h-4 w-4 mr-2 fill-yellow-400 text-yellow-400" />
-          Star on GitHub
-          <span className="ml-2 rounded-md bg-white/10 px-2 py-0.5 text-xs">18.6k</span>
-        </Button>
+        <a href="https://github.com/saikothasan/Kinetic-UI" target="_blank" rel="noopener noreferrer">
+          <Button className="bg-white/10 hover:bg-white/20 text-white text-sm font-medium border border-white/20">
+            <Star className="h-4 w-4 mr-2 fill-yellow-400 text-yellow-400" />
+            Star on GitHub
+            <span className="ml-2 rounded-md bg-white/10 px-2 py-0.5 text-xs">18.6k</span>
+          </Button>
+        </a>
       </header>
 
       <div className="relative z-10 flex flex-col items-center justify-center pt-20 pb-10 text-center px-4">
@@ -108,11 +110,17 @@ export default function HomePage() {
           <p className="mt-6 text-lg text-gray-400 max-w-xl mx-auto">
             Over 100 animated, interactive, and customizable React components, ready to be dropped into your projects.
           </p>
-          <div className="mt-8">
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button size="lg" className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold text-lg px-8 py-6 rounded-full shadow-[0_0_20px] shadow-purple-500/50 transition-shadow">
               Browse Components
               <ChevronRight className="h-5 w-5 ml-2" />
             </Button>
+            <a href="https://t.me/drkingbd" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" variant="outline" className="border-white/20 text-white font-semibold text-lg px-8 py-6 rounded-full bg-black/30 hover:bg-white/10 hover:text-white transition-colors">
+                <Send className="h-5 w-5 mr-2" />
+                Join our Telegram
+              </Button>
+            </a>
           </div>
         </div>
 
