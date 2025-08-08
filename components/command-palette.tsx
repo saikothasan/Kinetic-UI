@@ -11,7 +11,7 @@ import {
   CommandList,
   CommandSeparator,
 } from "@/components/ui/command";
-import { componentsData } from "@/data/components";
+import { componentsData } from "@/data/components"; // Updated import
 import { FileCode, Github, Moon } from 'lucide-react';
 
 interface CommandPaletteProps {

@@ -6,7 +6,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { type PropData } from "@/data/components";
+import { type PropData } from "@/data/types";
 
 interface PropsTableProps {
   props: PropData[];

@@ -7,7 +7,7 @@ export interface PropData {
 
 export interface ComponentProps {
   id: number;
-  name:string;
+  name: string;
   slug: string;
   description: string;
   category: string;

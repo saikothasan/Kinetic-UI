@@ -12,7 +12,7 @@ import ConfettiCannon from "./library/confetti-cannon";
 import TextReveal from "./library/text-reveal";
 import { BentoGrid, BentoGridItem } from "./library/bento-grid";
 import SpotlightCard from "./library/spotlight-card";
-import InteractiveGlobe from "./library/interactive-globe";
+import AnimatedBarChart from "./library/animated-bar-chart";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from 'lucide-react';
 
@@ -114,7 +114,7 @@ const componentMap: { [key: string]: React.FC<any> } = {
   "text-reveal": (props) => <TextRevealWrapper {...props} />,
   "bento-grid": (props) => <BentoGridDemo {...props} />,
   "spotlight-card": (props) => <SpotlightCard {...props} />,
-  "interactive-globe": (props) => <InteractiveGlobe {...props} />,
+  "animated-bar-chart": (props) => <AnimatedBarChart {...props} />,
 };
 
 const DefaultPreview = () => (
@@ -163,15 +163,16 @@ export function LivePreview({ slug, className, dynamicProps = {} }: LivePreviewP
         </div>
       )
     },
-    "interactive-globe": {
-      points: [
-        { lat: 34.0522, lon: -118.2437, city: 'Los Angeles', country: 'USA' },
-        { lat: 40.7128, lon: -74.0060, city: 'New York', country: 'USA' },
-        { lat: 51.5074, lon: -0.1278, city: 'London', country: 'UK' },
-        { lat: 35.6895, lon: 139.6917, city: 'Tokyo', country: 'Japan' },
-        { lat: -33.8688, lon: 151.2093, city: 'Sydney', country: 'Australia' },
+    "animated-bar-chart": {
+      data: [
+        { name: "Jan", value: 4000 },
+        { name: "Feb", value: 3000 },
+        { name: "Mar", value: 2000 },
+        { name: "Apr", value: 2780 },
+        { name: "May", value: 1890 },
+        { name: "Jun", value: 2390 },
       ]
-    }
+    },
   };
 
   const props = { ...defaultProps[slug], ...dynamicProps };

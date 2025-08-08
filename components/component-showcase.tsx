@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { componentsData } from "@/data/components";
+import { componentsData } from "@/data/components"; // Updated import
 import ComponentCard from "./component-card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";

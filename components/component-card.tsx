@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { type ComponentProps } from "@/data/components";
+import { type ComponentProps } from "@/data/types"; // Updated import
 import { LivePreview } from "./live-preview";
 
 const cardVariants = {

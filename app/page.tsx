@@ -79,7 +79,7 @@ export default function Component() {
       <header className="relative z-20 flex items-center justify-between p-4 md:p-6 border-b border-white/10">
         <div className="flex items-center gap-2">
           <SidebarTrigger className="md:hidden" />
-          <span className="text-lg font-bold hidden md:inline-block">Fusion UI</span>
+          <span className="text-lg font-bold hidden md:inline-block">React Bits</span>
         </div>
         <nav className="hidden md:flex items-center gap-6">
           <a href="#" className="text-sm font-medium flex items-center gap-1.5">
@@ -157,7 +157,7 @@ export default function Component() {
           <div className="flex items-center gap-2">
             <Sparkles className="h-5 w-5 text-yellow-300" />
             <p>
-              <span className="font-semibold">Vue Fusion</span>, the official Vue port of Fusion UI, is here!
+              <span className="font-semibold">Vue Bits</span>, the official Vue port of React Bits, is here!
             </p>
           </div>
           <div className="flex items-center gap-2">

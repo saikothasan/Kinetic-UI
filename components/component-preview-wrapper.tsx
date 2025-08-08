@@ -2,7 +2,7 @@
 
 import { useState, useMemo, useCallback, useEffect } from "react";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
-import { type ComponentProps } from "@/data/components";
+import { type ComponentProps } from "@/data/types"; // Updated import
 import { LivePreview } from "./live-preview";
 import { CodeViewer } from "./code-viewer";
 import { PropControls } from "./prop-controls";
