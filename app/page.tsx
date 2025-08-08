@@ -61,7 +61,7 @@ const CodeSnippet = () => (
   </div>
 );
 
-export default function Component() {
+export default function HomePage() {
   return (
     <div className="relative min-h-screen w-full overflow-x-hidden bg-black text-white">
       <div
@@ -151,28 +151,6 @@ export default function Component() {
       </div>
 
       <ComponentShowcase />
-
-      <footer className="relative z-20 mt-20 mb-10 mx-auto w-[95%] max-w-4xl">
-        <div className="flex items-center justify-between gap-4 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 p-2 pl-6 pr-3 text-sm text-white shadow-2xl shadow-purple-500/50">
-          <div className="flex items-center gap-2">
-            <Sparkles className="h-5 w-5 text-yellow-300" />
-            <p>
-              <span className="font-semibold">Vue Bits</span>, the official Vue port of Kinetic UI, is here!
-            </p>
-          </div>
-          <div className="flex items-center gap-2">
-            <Button asChild variant="ghost" size="sm" className="hover:bg-white/20 rounded-full">
-              <a href="https://t.me/drkingbdAnd" target="_blank" rel="noopener noreferrer">
-                <Send className="h-4 w-4 mr-2" />
-                Join our Telegram
-              </a>
-            </Button>
-            <Button variant="ghost" size="icon" className="hover:bg-white/20 rounded-full h-8 w-8">
-              <X className="h-4 w-4" />
-            </Button>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }

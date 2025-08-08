@@ -74,12 +74,14 @@ export default function RootLayout({
           fontMono.variable
         )}
       >
-        <PageProvider>
-          <div className="flex flex-1">
-            <AppSidebar />
-            <main className="flex-1">{children}</main>
-          </div>
-        </PageProvider>
+        <SidebarProvider defaultOpen={defaultOpen}>
+          <PageProvider>
+            <div className="flex flex-1">
+              <AppSidebar />
+              <main className="flex-1">{children}</main>
+            </div>
+          </PageProvider>
+        </SidebarProvider>
         <Footer />
       </body>
     </html>
